@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>IP University</title>
+	<link rel="stylesheet" type="text/css" href="webSitehelp.css">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script>
+		$(document).ready(function(){
+			$('#icon').click(function(){
+				$('ul').toggleClass('show');
+
+		   });
+		});
+	</script>
+
+</head>
+<body>
+	<div id="MainPage">
+
+	    <div id="container1">
+	    	<h3>
+	    		<i class="fa fa-phone"></i>
+	    	Call us: 9097743108</h3>
+	    	<h3>
+	    		<i class="fa fa-envelope"></i>
+	    	www.shubhamsingh6666@gmail.com</h3>
+	    </div>
+
+	    <div id="container">
+	    </div>
+
+	    <div id="container2">
+	    	<h3>Address.</h3>
+	    	<h3> IP.University.......<br>
+	    		Delhi Dowarika sector 62..<br>
+	    		<i class="fa fa-envelope"></i>
+	    		www.ipUniversity.com</h3>
+	    </div>
+	</div>
+
+      
+	    <nav>
+            <label class="logo"><img src="E:/css/download.png"></label>
+        	    <ul> 
+        	   	  <li><a class="active" href="#">Home</a></li>
+			        <li><a href="about.html">About us</a></li>
+			        <li><a href="#">Program</a></li>
+			        <li><a href="program_file.html">Admission</a></li>
+			        <li><a href="#">Placement</a></li>
+			        <li><a href="image_part.html">IP Gallery</a></li>
+                </ul>
+                <label id="icon">
+                	<i class="fas fa-bars"></i>
+                </label>
+        </nav>
+
+        <!-- start img slider -->
+
+              <div class="img-slider">
+
+              	<!-- start slide from here-->
+
+                 <div class="slide active">
+                 	<img src="E:/css/ip_project/image6.jpg">
+                 </div>
+
+                 <div class="slide">
+                 	<img src="E:/css/ip_project/image5.jpg">
+                 </div>
+
+                 <div class="slide">
+                 	<img src="E:/css/ip_project/image7.jpg">
+                 </div>
+
+                 <div class="slide">
+                 	<img src="E:/css/ip_project/image8.jpg">
+                 </div>
+
+                 <div class="slide">
+                  <img src="E:/css/ip_project/image7.jpg">
+                 </div>
+              	<!-- end slide here-->
+
+                 <!-- Navigation have started from here -->
+
+              	<div class="navigation">
+
+                    <!-- btn process start from here -->
+              		<div class="btn active"></div>
+              		<div class="btn"></div>
+              		<div class="btn"></div>
+              		<div class="btn"></div>
+                  <div class="btn"></div>
+              		<!-- btn process ended here -->
+              		
+              	</div>
+              	<!-- Navigation have endedhere -->
+
+              </div>
+              <!-- end img slider -->
+
+              <!-- java script start over here -->
+
+             <script type="text/javascript">
+             	var slides=document.querySelectorAll('.slide');
+             	var btns=document.querySelectorAll('.btn');
+             	let currentSlide=1;
+
+             	// java script for iamge slider manual navigation
+
+             	var manualNav=function(manual){
+             		slides.forEach((slide)=>{
+                       slide.classList.remove('active');
+
+                       btns.forEach((btn)=>{
+                       	btn.classList.remove('active');
+
+                       });
+             		});
+             		slides[manual].classList.add('active');
+             		btns[manual].classList.add('active');
+             	}
+
+             	btns.forEach((btn,i)=>{
+                    btn.addEventListener("click",()=>{
+                    	manualNav(i);
+                    	currentSlide=i;
+
+                    });
+             	});
+
+             	// javaScript for image slider, i.e autoplay navigation 
+
+               var repeat=function(activeClass){
+                  let active =document.getElementsByClassName('active');
+                  let i=1;
+
+                  var repeater=()=>{
+                     setTimeout(function(){
+                        [...active].forEach((activeSlide) =>{
+                           activeSlide.classList.remove("active");
+
+                        });
+
+                        slides[i].classList.add('active');
+                        btns[i].classList.add('active');
+                        i++;
+
+                        if(slides.lenght==i){
+                           i=0;
+                        }
+                        if(i>=slides.lenght){
+                              return;
+                        }
+                        repeater();
+                     },10000);
+                  }
+                  repeater();
+               }
+               repeat();
+             </script>
+
+
+              <!-- java script start over here -->
+        
+         <marquee>=> Do's and Don'ts for online Examination of the University</marquee>
+
+         <div id="note">
+
+         <h1>Urgent Notice</h1>
+         <a href="">Registration for online Examination</a><br>
+         <a href="">Support Email: www.shubhamsingh6666@gmail.com, Helpine No: 9097743108</a>
+
+         </div>
+
+    <div id="containerLast">
+    	      <div class="box3">
+    	      	<h1>Admission 2021-2022</h1>
+               <hr>
+               <ul class="a">
+                  <li>Admission Webpage</li>
+                  <li><a href="file:///E:/css/ip_project/Main_pages2_pdf.pdf">Admission Brochures</a></li>
+               </ul>
+
+               <ol class="b">
+                  <li>For General Porgram</li>
+                  <li>For Foreign Students</li>
+                  <li>For Ph.D/M.Phil Prograam</li>
+                  <li>Admission Notices</li>
+               </ol>
+
+               <ul class="a">
+                  <li>Apply through:<br>https://ipu.admissions.nic.in</li>
+               </ul>
+      
+    	      	<button><a href="program_file.html">Appile Now</a></button>
+    	      </div>
+    	      <div class="box2">
+    	      	<h1>Event and Update</h1>
+               <hr>
+    	      	   <ul class="a">
+                  <li>28th ICNTRM-2020</li>
+                  <li>Photgraphs of various events</li>
+                  <li>Faculty Feedback System(Only For USS)</li>
+                  <li>CVC-Integrity Pledge</li>
+                  <li>Merit-cum_Mean Income<br>Linked Financial Schema<br>Students of State Universities of Delhi</li>
+                  <li>Admission Brochures</li>
+               </ul>
+    	      </div>
+    	      <div class="box2">
+    	      	<h1>Important Link...</h1>
+               <hr>
+    	      	   <ul class="a">
+                  <li>Admission Webpage <i class="fa fa-star-o" style="font-size:35px; color:red"></i></li>
+                  <li>Admission Brochures</li>
+                  <li>Admission Webpage</li>
+                  <li>Admission Brochures</li>
+                  <li>Admission Webpage</li>
+                  <li>Admission Brochures</li>
+                  <li>Admission Webpage</li>
+                  <li>Admission Brochures</li>
+               </ul>
+    	      </div>
+    	      <div class="box1">
+    	      	<h1>Alerts</h1>
+               <hr>
+                <ul class="a">
+                  <li>Visit for University Grievance<br>Monitoring System</li>
+                  <li>Indraprasth 2019</li>
+                  <li>Notice-New/Additinal IVR/Help Number</li>
+                  <li>General information about the protected Online Examation</li>
+               </ul>
+    	      	<button>Appile Now</button>
+    	      </div>
+   </div>
+
+   <!-- follow me process -->
+   <div id="follow">
+      <h1>Follow Me:</h1><br>
+      <div class="box-size"><a href="http://whatsapp.com"><img src="E:/css/ip_project/tenor.gif"></a></div>
+      <div class="box-size"><a href="http://facebook.com"><img src="E:/css/ip_project/facebook.png"></a></div>
+      <div class="box-size"><a href="http://instagram.com"><img src="E:/css/ip_project/tenor%20(1).gif"></a></div>
+      <div class="box-size"><a href="http://tiwter.com"><img src="E:/css/ip_project/tiwter.gif"></a></div>
+   </div>
+
+    <!-- follow me process end -->
+
+
+
+       <header></header>
+       <main></main>
+       <footer>
+
+          <div class="footer-body">
+
+             <div>Your Brand Here.</div>
+
+             <div>
+                <p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua </p>
+
+                <ul>
+                  <li><a href="#"> About </a></li>
+                  <li><a href="#"> Contact </a></li>
+                  <li><a href="#"> Terms & Conditions</a></li>
+                  <li><a href="#"> Privacy policy </a></li>
+                  <li><a href="#"> About </a></li>
+                  <li><a href="#"> Contact </a></li>
+                  <li><a href="#"> Terms & Conditions</a></li>
+                  <li><a href="#"> Privacy policy </a></li>
+                </ul>
+             </div>
+          </div>
+
+          <div class="footer-copyright">
+              @ Copyright goes here. 
+          </div>
+
+       </footer>
+       <script type="webSitehelpJS.js"></script>
+</body>
+</html>
